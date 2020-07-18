@@ -55,6 +55,8 @@ namespace DocuHub
 
             app.UseRouting();
 
+            app.UseStaticFiles();
+
             app.UseMvc();
         }
     }
