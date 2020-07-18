@@ -1,4 +1,41 @@
-﻿@{
+﻿@model List<DocuHub.BOL.RingBinder>
+@{
+}
+@{int i=0;}
+@foreach (var ringbinder in Model)
+{
+    i++;
+    @if(i==1){@Html.Raw("<div class=\"card-deck mb-4\">")}
+    @if(ringbinder.Color==null)
+    {
+        <div class="card" style="border-color: #@ringbinder.Color">
+            <div class="card-body">
+                <h5 class="card-title">@ringbinder.Name</h5>
+                <p class="card-text">@ringbinder.Description</p>
+                <a href="#" class="card-link">Card link</a>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card" style="border-color: #@ringbinder.Color">
+            <div class="card-body">
+                <h5 class="card-title">@ringbinder.Name</h5>
+                <p class="card-text">@ringbinder.Description</p>
+                <a href="#" class="card-link">Card link</a>
+            </div>
+        </div>
+    }
+    @if(i==3){
+        @Html.Raw("</div>") 
+        i=0;
+        }
+}
+@if(i!=0)
+{
+    @Html.Raw("</div>") 
 }
 
-<h1>Ring binders</h1>
+
+
+        
