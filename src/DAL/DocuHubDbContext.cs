@@ -47,7 +47,8 @@ namespace DocuHub.DAL
                 entity.Property(e => e.Guid)
                     .IsRequired()
                     .HasColumnName("GUID")
-                    .HasColumnType("varchar(32)")
+                    .HasColumnType("varchar(36)")
+                    .HasDefaultValueSql("(uuid())")
                     .HasCharSet("utf8")
                     .HasCollation("utf8_polish_ci");
 
@@ -104,7 +105,8 @@ namespace DocuHub.DAL
                 entity.Property(e => e.Guid)
                     .IsRequired()
                     .HasColumnName("GUID")
-                    .HasColumnType("varchar(32)")
+                    .HasColumnType("varchar(36)")
+                    .HasDefaultValueSql("(uuid())")
                     .HasCharSet("utf8")
                     .HasCollation("utf8_polish_ci");
 
