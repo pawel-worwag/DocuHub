@@ -16,7 +16,7 @@ namespace DocuHub.Areas.RingBinders.Controllers
         [HttpGet("/ringbinders")]
         public IActionResult Index()
         {
-            return Ok();
+            return View();
         }
     }
 }
