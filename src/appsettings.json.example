@@ -13,5 +13,14 @@
         "Url": "http://localhost:5012"
       }
     }
+  },
+  "Database": {
+    "ConnectionString":"Server=localhost;Database=ef;User=root;Password=1234;",
+    "DbVersion": {
+      "Major":8,
+      "Minor":0,
+      "Build":17
+    },
+    "DbType":0
   }
 }
