@@ -1,1 +1,11 @@
+# Visual Studio Code
+.vscode
+
+# Build results
+src/[Bb]in/
+src/[Oo]bj/
+src/[Pp]roperties/
+src/appsettings.Development.json
+src/appsettings.json
+
 doc/**/*.bak
