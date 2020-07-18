@@ -41,6 +41,8 @@ namespace DocuHub
                 .UseMySql(connectionString,
                      mySqlOptions => mySqlOptions
                      .ServerVersion(new Version(major, minor, build), type)));
+
+            services.AddScoped<IRingBindersRepository,RingBindersRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
