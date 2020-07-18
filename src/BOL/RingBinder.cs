@@ -16,7 +16,7 @@ namespace DocuHub.BOL
         public string Guid { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public byte[] Pinned { get; set; }
+        public int Pinned { get; set; }
         public string Color { get; set; }
 
         public virtual ICollection<Page> Pages { get; set; }

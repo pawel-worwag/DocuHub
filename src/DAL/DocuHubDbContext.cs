@@ -118,9 +118,8 @@ namespace DocuHub.DAL
 
                 entity.Property(e => e.Pinned)
                     .IsRequired()
-                    .HasMaxLength(1)
-                    .IsFixedLength()
-                    .HasDefaultValueSql("'0x30'");
+                    .HasColumnType("INT(1)")
+                    .HasDefaultValueSql("0");
             });
 
             OnModelCreatingPartial(modelBuilder);
