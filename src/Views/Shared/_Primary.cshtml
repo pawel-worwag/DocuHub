@@ -6,13 +6,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/sidebar.min.css">
         <title>DocuHub</title>
     </head>
     <body>
 
 
 
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" style="background-color:#3b3b3b;">
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row" style="background-color:#3b3b3b;">
     <a class="navbar-brand mr-0 mr-md-2 mr-3" href="#">
         <svg id="svg853" width="18.488mm" height="8.8361mm" version="1.1" viewBox="0 0 18.488 8.8361" xmlns="http://www.w3.org/2000/svg">
         <g id="layer1" transform="translate(-36.311 -39.086)" fill="#e6e6e6" stroke-width=".26458">
@@ -32,7 +33,7 @@
     </a>
 
   <div class="navbar-nav-scroll ml-5">
-    <ul class="navbar-nav bd-navbar-nav flex-row">
+    <ul class="navbar-nav flex-row">
       <li class="nav-item">
         <a class="nav-link " href="#" >Home</a>
       </li>
@@ -46,7 +47,28 @@
 </header>
 
 
-    @RenderBody()
+<div class="container-fluid">
+    <div class="row flex-x1-nowrap">
+        <div class="col-3 col-xl-2 dh-sidebar">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ring binders</a>
+            </li>
+          </ul>
+
+
+        </div>
+@if(ViewData["infoBar"]!=null && (bool)ViewData["infoBar"]==true)
+{
+        <div class="col-3 col-xl-2 dh-info">
+          @RenderSection("infoBar",false)
+        </div>
+}
+        <main class="col">
+          @RenderBody() 
+        </main>
+    </div>
+</div>
 
 
     </body>
